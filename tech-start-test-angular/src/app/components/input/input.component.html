@@ -1,0 +1,26 @@
+<div class="container">
+    <form [formGroup]="fileForm" (ngSubmit)="addFile()">
+        <div class="row justify-content-start">
+            <div class="formGroup col-2">
+                <label>Upload Excel:</label>
+                <br>
+                <input id="fileForm" type="file" (change)="onFileSelect($event)" [formControl]="fileForm">
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-primary" style="margin-top: 1em;">Upload Data</button>                                             
+            </div>
+        
+        <div class="row" style="margin-top: 0.5em;">
+            <div class="col-3">
+                <div class="alert alert-primary" *ngIf="fileLoaded">File uploaded</div>
+                <div class="alert alert-danger" *ngIf="errorLoading">Error uploading file</div>   
+            </div>
+        </div>            
+        </div>      
+    </form>
+    <div class="row justify-content-center" style="margin-top: 1em;">
+        <app-table *ngIf="invoiceList" [invoiceList]="invoiceList"></app-table>
+    </div>
+</div>
+
+
