@@ -35,6 +35,8 @@ open a seperate command prompt in TechStartTest/tech-start-test-angular and inst
 open angular server at port 4200:
 
     ng serve --open
+    
+![Capture](Capture.PNG)
 
 Page hosted at localhost:4200.
 All services are hosted at localhost:8080.
